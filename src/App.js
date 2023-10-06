@@ -58,29 +58,49 @@ function App() {
     {
       title: 'Social',
       img: 'images/icon-social.svg',
-      daily: {now: '1hr', previous: '3hrs'},
-      weekly: {now: '5hrs', previous: '10hrs'},
-      monthly:{now:  '21hrs', previous: '23hrs'}
-      
+      daily: { now: '1hr', previous: '3hrs' },
+      weekly: { now: '5hrs', previous: '10hrs' },
+      monthly: { now: '21hrs', previous: '23hrs' }
+
     },
 
     {
-      title: 'Self Care',
+      title: 'Self-Care',
       img: 'images/icon-self-care.svg',
 
-      daily: {now: '0hrs', previous: '1hr'},
-      weekly: {now: '2hrs', previous: '2hrs'},
-      monthly: {now: '7hrs', previous: '11hrs'}
-      
+      daily: { now: '0hrs', previous: '1hr' },
+      weekly: { now: '2hrs', previous: '2hrs' },
+      monthly: { now: '7hrs', previous: '11hrs' }
+
     }
   ]
-  const [time, setTime] = useState('daily');
+  const [time, setTime] = useState('monthly');
 
   return (
-    <div className="App">
-        <div></div>
-        {timeTracking.map((t)=><TimeBox time={time}>{t}</TimeBox>)}
-    </div>
+    <>
+      <div className="grid">
+        <div className="perfil">
+          <div className="photo-perfil">
+            <img src="images/image-jeremy.png" alt="img-id" />
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+          </div>
+          <div className="choose-time">
+            <ul>
+              <li onClick={() => setTime('daily')}>Daily</li>
+              <li onClick={() => setTime('weekly')}>Weekly</li>
+              <li onClick={() => setTime('monthly')}>Monthly</li>
+            </ul>
+          </div>
+        </div>
+        <div className="dashboard">
+          {timeTracking.map((t) =>
+            <TimeBox time={time}>
+              {t}
+            </TimeBox>)}
+        </div>
+      </div>
+    </>
   );
 }
 
