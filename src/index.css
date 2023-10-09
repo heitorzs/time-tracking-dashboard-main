@@ -7,7 +7,10 @@ body {
   font-weight: 300;
   background-color: var(--Verydarkblue);
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -49,8 +52,13 @@ code {
 }
 .choose-time li {
   padding: 0.5rem;
+  cursor: pointer;
 }
-
+.choose-time li :hover{
+  padding: 0.5rem;
+  cursor: pointer;
+  color: rgb(226, 223, 223);
+}
 .dashboard {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr;
@@ -65,8 +73,14 @@ code {
 
 }
 
-p, h1 {
+p{
   color: rgb(226, 223, 223);
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: white;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
