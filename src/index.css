@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
   background-color: var(--Verydarkblue);
 }
 
@@ -28,105 +28,97 @@ code {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100vh;
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .perfil {
-
-  padding: 10px;
+  width: 200px;
 }
 .choose-time{
-  border: 1px solid wheat;
   color: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  background-color: var(--Darkblue);
+}
+.choose-time ul {
   list-style: none;
-
+  padding: 1rem;
+}
+.choose-time li {
+  padding: 0.5rem;
 }
 
 .dashboard {
-  display: grid;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-template-columns: repeat(3, 3fr);
-  grid-auto-rows: 250px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  margin: auto;
 }
 
 .title {
   display: flex;
   align-items: center;
-  padding: 10px;
   justify-content: space-between;
+
 }
 
-
+p, h1 {
+  color: rgb(226, 223, 223);
+  margin: 0;
+  padding: 0;
+}
 .content{
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 200px;
+  padding: 0 20px;
   border-radius: 15px;
+  justify-content: space-between;
+  color: white;
   background-color: var(--Darkblue);
+  position: relative;
 }
 
 .header-Work {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 150px;
-  width: 200px;
+
+
   background-color: var(--Lightred_work);
   border-radius: 15px;
 
 }
 .header-Play {
-  display: flex;
-  flex-direction: column;
-  height: 150px;
-  width: 200px;
-  justify-content: space-between;
+  
+  
   background-color: var(--Softblue_play);
   border-radius: 15px;
 
 }
 .header-Study {
-  display: flex;
-  flex-direction: column;
-  height: 150px;
-  width: 200px;
-  justify-content: space-between;
+ 
   background: var(--Lightred_study);
   border-radius: 15px;
 
 }
 .header-Exercise {
-  display: flex;
-  flex-direction: column;
-  height: 150px;
-  width: 200px;
-  justify-content: space-between;
+  
   background-color: var(--Limegreen_exercise);
   border-radius: 15px;
 
 }
 
 .header-Social {
-  display: flex;
-  flex-direction: column;
-  height: 150px;
-  width: 200px;
-  justify-content: space-between;
+  
   background-color: var(--Violet_social);
   border-radius: 15px;
 
 }
 
 .header-Self-Care {
-  display: flex;
-  flex-direction: column;
-  height: 150px;
-  width: 200px;
-  justify-content: space-between;
+  
   background-color: var(--Softorange_selfcare);
   border-radius: 15px;
 
@@ -142,13 +134,14 @@ code {
   width: 50px;
 }
 .perfil{
-  border: 1px solid green;
-  margin: auto;
+  background-color: var(--Darkblue);
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
   border-radius: 15px;
 }
 .photo-perfil{
   padding: 20px;
-  border: 1px solid ghostwhite;
   border-radius: 15px;
   background-color: var(--Blue);
 

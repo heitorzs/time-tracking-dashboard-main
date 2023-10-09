@@ -30,7 +30,7 @@ function TimeBox({ children, time }) {
                         <p>...</p>
                     </div>
                     <h1>{timeData.now}</h1>
-                    <h3>{last} - {timeData.previous}</h3>
+                    <p>{last} - {timeData.previous}</p>
                 </div>
 
             </div>
